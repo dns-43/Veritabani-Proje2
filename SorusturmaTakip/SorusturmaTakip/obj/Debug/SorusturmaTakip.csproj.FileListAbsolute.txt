@@ -31,4 +31,3 @@ C:\projects\repos\SorusturmaTakip\SorusturmaTakip\obj\Debug\SorusturmaTakip.cspr
 C:\projects\repos\SorusturmaTakip\SorusturmaTakip\obj\Debug\SorusturmaTakip.csproj.CopyComplete
 C:\projects\repos\SorusturmaTakip\SorusturmaTakip\obj\Debug\SorusturmaTakip.exe
 C:\projects\repos\SorusturmaTakip\SorusturmaTakip\obj\Debug\SorusturmaTakip.pdb
-C:\projects\repos\SorusturmaTakip\SorusturmaTakip\obj\Debug\SorusturmaTakip.deneme.resources

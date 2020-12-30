@@ -29,9 +29,9 @@ namespace SorusturmaTakip
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -60,16 +60,29 @@ namespace SorusturmaTakip
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTCKN2 = new System.Windows.Forms.TextBox();
-            this.txtAdi2 = new System.Windows.Forms.TextBox();
+            this.btnEkle2 = new System.Windows.Forms.Button();
+            this.btnSil2 = new System.Windows.Forms.Button();
+            this.btnGuncelle2 = new System.Windows.Forms.Button();
+            this.comboMTur = new System.Windows.Forms.ComboBox();
+            this.txtMateryal = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtSorusturma = new System.Windows.Forms.TextBox();
+            this.txtkapasite = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtSoyadi2 = new System.Windows.Forms.TextBox();
+            this.txtAdi2 = new System.Windows.Forms.TextBox();
+            this.txtTCKN2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.radioSupheli.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -80,7 +93,6 @@ namespace SorusturmaTakip
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -88,34 +100,34 @@ namespace SorusturmaTakip
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.Location = new System.Drawing.Point(38, 128);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(600, 240);
             this.dataGridView1.TabIndex = 0;
@@ -130,6 +142,7 @@ namespace SorusturmaTakip
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(787, 435);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // radioSupheli
             // 
@@ -399,37 +412,171 @@ namespace SorusturmaTakip
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.btnEkle2);
+            this.tabPage2.Controls.Add(this.btnSil2);
+            this.tabPage2.Controls.Add(this.btnGuncelle2);
+            this.tabPage2.Controls.Add(this.comboMTur);
+            this.tabPage2.Controls.Add(this.txtMateryal);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.txtSorusturma);
+            this.tabPage2.Controls.Add(this.txtkapasite);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.txtSoyadi2);
             this.tabPage2.Controls.Add(this.txtAdi2);
             this.tabPage2.Controls.Add(this.txtTCKN2);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(779, 409);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Soruşturma";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // btnEkle2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 71);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Soyadı";
+            this.btnEkle2.Location = new System.Drawing.Point(658, 116);
+            this.btnEkle2.Name = "btnEkle2";
+            this.btnEkle2.Size = new System.Drawing.Size(75, 23);
+            this.btnEkle2.TabIndex = 17;
+            this.btnEkle2.Text = "EKLE";
+            this.btnEkle2.UseVisualStyleBackColor = true;
+            this.btnEkle2.Click += new System.EventHandler(this.btnEkle2_Click);
             // 
-            // label11
+            // btnSil2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(39, 45);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Adı";
+            this.btnSil2.Location = new System.Drawing.Point(658, 145);
+            this.btnSil2.Name = "btnSil2";
+            this.btnSil2.Size = new System.Drawing.Size(75, 23);
+            this.btnSil2.TabIndex = 16;
+            this.btnSil2.Text = "SİL";
+            this.btnSil2.UseVisualStyleBackColor = true;
+            this.btnSil2.Click += new System.EventHandler(this.btnSil2_Click);
+            // 
+            // btnGuncelle2
+            // 
+            this.btnGuncelle2.Location = new System.Drawing.Point(658, 174);
+            this.btnGuncelle2.Name = "btnGuncelle2";
+            this.btnGuncelle2.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle2.TabIndex = 15;
+            this.btnGuncelle2.Text = "GÜNCELLE";
+            this.btnGuncelle2.UseVisualStyleBackColor = true;
+            this.btnGuncelle2.Click += new System.EventHandler(this.btnGuncelle2_Click);
+            // 
+            // comboMTur
+            // 
+            this.comboMTur.FormattingEnabled = true;
+            this.comboMTur.Items.AddRange(new object[] {
+            "Cep Telefonu",
+            "Harddisk",
+            "USB Bellek",
+            "Sd Kart",
+            "Sim Kart"});
+            this.comboMTur.Location = new System.Drawing.Point(596, 16);
+            this.comboMTur.Name = "comboMTur";
+            this.comboMTur.Size = new System.Drawing.Size(121, 21);
+            this.comboMTur.TabIndex = 14;
+            // 
+            // txtMateryal
+            // 
+            this.txtMateryal.Location = new System.Drawing.Point(386, 68);
+            this.txtMateryal.Multiline = true;
+            this.txtMateryal.Name = "txtMateryal";
+            this.txtMateryal.Size = new System.Drawing.Size(152, 42);
+            this.txtMateryal.TabIndex = 13;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(315, 68);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(65, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Materyal Adı";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(518, 19);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Materyal Türü";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(25, 116);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(616, 240);
+            this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
+            // 
+            // txtSorusturma
+            // 
+            this.txtSorusturma.Location = new System.Drawing.Point(386, 16);
+            this.txtSorusturma.Name = "txtSorusturma";
+            this.txtSorusturma.Size = new System.Drawing.Size(100, 20);
+            this.txtSorusturma.TabIndex = 9;
+            // 
+            // txtkapasite
+            // 
+            this.txtkapasite.Location = new System.Drawing.Point(386, 42);
+            this.txtkapasite.Multiline = true;
+            this.txtkapasite.Name = "txtkapasite";
+            this.txtkapasite.Size = new System.Drawing.Size(152, 20);
+            this.txtkapasite.TabIndex = 8;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(305, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Soruşturma no";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(332, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Kapasite";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // txtSoyadi2
+            // 
+            this.txtSoyadi2.Location = new System.Drawing.Point(82, 68);
+            this.txtSoyadi2.Name = "txtSoyadi2";
+            this.txtSoyadi2.Size = new System.Drawing.Size(171, 20);
+            this.txtSoyadi2.TabIndex = 5;
+            // 
+            // txtAdi2
+            // 
+            this.txtAdi2.Location = new System.Drawing.Point(82, 42);
+            this.txtAdi2.Name = "txtAdi2";
+            this.txtAdi2.Size = new System.Drawing.Size(171, 20);
+            this.txtAdi2.TabIndex = 4;
+            // 
+            // txtTCKN2
+            // 
+            this.txtTCKN2.Location = new System.Drawing.Point(82, 16);
+            this.txtTCKN2.Name = "txtTCKN2";
+            this.txtTCKN2.Size = new System.Drawing.Size(171, 20);
+            this.txtTCKN2.TabIndex = 3;
             // 
             // label12
             // 
@@ -440,26 +587,23 @@ namespace SorusturmaTakip
             this.label12.TabIndex = 2;
             this.label12.Text = "T.C.Kimlik";
             // 
-            // txtTCKN2
+            // label11
             // 
-            this.txtTCKN2.Location = new System.Drawing.Point(82, 16);
-            this.txtTCKN2.Name = "txtTCKN2";
-            this.txtTCKN2.Size = new System.Drawing.Size(171, 20);
-            this.txtTCKN2.TabIndex = 3;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(39, 45);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(22, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Adı";
             // 
-            // txtAdi2
+            // label10
             // 
-            this.txtAdi2.Location = new System.Drawing.Point(82, 42);
-            this.txtAdi2.Name = "txtAdi2";
-            this.txtAdi2.Size = new System.Drawing.Size(171, 20);
-            this.txtAdi2.TabIndex = 4;
-            // 
-            // txtSoyadi2
-            // 
-            this.txtSoyadi2.Location = new System.Drawing.Point(82, 68);
-            this.txtSoyadi2.Name = "txtSoyadi2";
-            this.txtSoyadi2.Size = new System.Drawing.Size(171, 20);
-            this.txtSoyadi2.TabIndex = 5;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(37, 71);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Soyadı";
             // 
             // Kisiler
             // 
@@ -478,6 +622,7 @@ namespace SorusturmaTakip
             this.radioSupheli.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -517,6 +662,18 @@ namespace SorusturmaTakip
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtSorusturma;
+        private System.Windows.Forms.TextBox txtkapasite;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboMTur;
+        private System.Windows.Forms.TextBox txtMateryal;
+        private System.Windows.Forms.Button btnEkle2;
+        private System.Windows.Forms.Button btnSil2;
+        private System.Windows.Forms.Button btnGuncelle2;
     }
 }
 

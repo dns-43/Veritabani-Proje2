@@ -35,18 +35,21 @@ namespace SorusturmaTakip
 
 
         }
-        deneme fr;
-        private void button1_Click(object sender, EventArgs e)
+
+        void listele2()
         {
-            if (fr == null)
-            {
-                fr = new deneme();
+            //DataSet ds = new DataSet();
+            string sorgu2 = "SELECT kisi.tcno,  kisi.adi,  kisi.soyadi, materyal.materyaladi, materyal.türü, materyal.kapasitesi,  materyal.sorusturmano FROM kisi INNER JOIN materyal  ON kisi.tcno = materyal.kisino";
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(sorgu2, bgl.baglanti());
+            // MessageBox.Show(da.ToString());
+            DataTable tablo2 = new DataTable();
+            da.Fill(tablo2);
+            dataGridView2.DataSource = tablo2;
+            //bgl.baglanti().Close();
 
-                fr.Show();
-
-            }
 
         }
+
 
         private void Kisiler_Load(object sender, EventArgs e)
         {
@@ -187,20 +190,87 @@ namespace SorusturmaTakip
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            string sorgu = "SELECT * FROM kisi WHERE tcno=@tcno";
+            /*string sorgu = "SELECT * FROM kisi WHERE tcno=@tcno";
             NpgsqlCommand komut = new NpgsqlCommand(sorgu, bgl.baglanti());
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(sorgu, bgl.baglanti());
             komut.Parameters.AddWithValue("@tcno", (txtTCKN.Text));
             DataTable tablo = new DataTable();
             da.Fill(tablo);
             dataGridView1.DataSource = tablo;
-            da.ExecuteNonQuery();
+            da.ExecuteNonQuery(); */
 
             listele();
 
 
 
 
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            listele2();
+        }
+
+        private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            txtTCKN2.Text = dataGridView2.CurrentRow.Cells[0].Value.ToString();
+            txtAdi2.Text = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            txtSoyadi2.Text = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            txtMateryal.Text = dataGridView2.CurrentRow.Cells[3].Value.ToString();
+            txtkapasite.Text = dataGridView2.CurrentRow.Cells[5].Value.ToString();
+            txtSorusturma.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void btnEkle2_Click(object sender, EventArgs e)
+        {
+            string sorgu = " INSERT INTO materyal(materyaladi,türü,kapasitesi,kisino,sorusturmano) VALUES(@materyaladi,@türü,@kapasitesi,@kisino,@sorusturmano)";
+            NpgsqlCommand komut = new NpgsqlCommand(sorgu, bgl.baglanti());
+            komut.Parameters.AddWithValue("@kisino", txtTCKN2.Text);
+            komut.Parameters.AddWithValue("@materyaladi", txtMateryal.Text);
+            komut.Parameters.AddWithValue("@kapasitesi", txtkapasite.Text);
+            komut.Parameters.AddWithValue("@sorusturmano", txtSorusturma.Text);
+            komut.Parameters.AddWithValue("@türü", comboMTur.SelectedItem);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            listele2();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = comboMTur.SelectedIndex;
+            Object selectedItem = comboMTur.SelectedItem;
+
+            MessageBox.Show("Selected Item Text: " + selectedItem.ToString() + "\n" + "Index: " + selectedIndex.ToString());
+
+        }
+
+        private void btnSil2_Click(object sender, EventArgs e)
+        {
+            string sorgu = "DELETE FROM  materyal WHERE kisino=@kisino";
+            NpgsqlCommand komut = new NpgsqlCommand(sorgu, bgl.baglanti());
+            komut.Parameters.AddWithValue("@kisino", (txtTCKN2.Text));
+            /// bgl.baglanti().Open();
+            komut.ExecuteNonQuery();
+            listele2();
+        }
+
+        private void btnGuncelle2_Click(object sender, EventArgs e)
+        {
+            //materyaladi,türü,kapasitesi,kisino,sorusturmano
+            string sorgu = " UPDATE materyal SET materyaladi=@materyaladi, soyadi=@soyadi, türü=@türü, kapasitesi=@kapasitesi, sorusturmano=@sorusturmano WHERE kisino=@kisino";
+            NpgsqlCommand komut = new NpgsqlCommand(sorgu, bgl.baglanti());
+            komut.Parameters.AddWithValue("@kisino", txtTCKN2.Text);
+            komut.Parameters.AddWithValue("@materyaladi", txtMateryal.Text);
+            komut.Parameters.AddWithValue("@kapasitesi", txtkapasite.Text);
+            komut.Parameters.AddWithValue("@sorusturmano", txtSorusturma.Text);
+            komut.Parameters.AddWithValue("@türü", comboMTur.SelectedItem);
+            komut.ExecuteNonQuery();
+            listele2();
         }
     }
 }
